@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="605.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MediaController">
+   <children>
+      <Label fx:id="songTitle" alignment="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="87.0" prefWidth="578.0" style="-fx-background-color: green;">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <ProgressBar fx:id="progress" layoutX="15.0" layoutY="103.0" prefHeight="26.0" prefWidth="578.0" progress="0.0" style="-fx-background-color: yellow;" />
+      <Button fx:id="playButton" layoutX="11.0" layoutY="140.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="66.0" text="PLAY" />
+      <Button fx:id="pauseButton" layoutX="77.0" layoutY="140.0" mnemonicParsing="false" onAction="#pause" prefHeight="25.0" prefWidth="66.0" text="PAUSE" />
+      <Button fx:id="resetButton" layoutX="143.0" layoutY="140.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="66.0" text="RESET" />
+      <Button fx:id="nextButton" layoutX="209.0" layoutY="140.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="66.0" text="NEXT" />
+      <Button fx:id="previousButton" accessibleRoleDescription="HYPERLINK" layoutX="275.0" layoutY="140.0" mnemonicParsing="false" onAction="#previous" prefHeight="25.0" prefWidth="73.0" text="PREVIOUS" />
+      <ComboBox fx:id="speedBox" layoutX="348.0" layoutY="140.0" onAction="#changespeed" prefHeight="25.0" prefWidth="79.0" promptText="SPEED" />
+      <Slider fx:id="volume" layoutX="434.0" layoutY="140.0" prefHeight="25.0" prefWidth="159.0" />
+   </children>
+</AnchorPane>
